@@ -2,7 +2,10 @@ package com.example.dz_s_biletami;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity2 extends AppCompatActivity {
@@ -24,7 +27,14 @@ TextView to;
         from.setText("Город отправления: "+bilet.getFrom().toString());
         to=findViewById(R.id.textView4);
         to.setText("Город прибытия: "+bilet.getTo().toString());
-
+        Button  OAuth=findViewById(R.id.button2);
+        OAuth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
