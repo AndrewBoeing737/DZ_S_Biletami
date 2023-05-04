@@ -23,11 +23,12 @@ EditText to;
         surname=findViewById(R.id.editTextTextPersonName2);
         from=findViewById(R.id.editTextTextPersonName3);
         to=findViewById(R.id.editTextTextPersonName4);
+        EditText stoimost=findViewById(R.id.editTextTextPersonName5);
         kypit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(getApplicationContext(),MainActivity2.class);
-                Bilet bilet= (Bilet) new Bilet(name.getText().toString(),surname.getText().toString(),from.getText().toString(),to.getText().toString());
+                Bilet bilet= (Bilet) new Bilet(name.getText().toString(),surname.getText().toString(),from.getText().toString(),to.getText().toString(),stoimost.getText().toString());
                 intent.putExtra("Bilet",bilet);
                 startActivity(intent);
 
